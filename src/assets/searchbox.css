@@ -1,9 +1,15 @@
+.test-log {
+    background-color: bisque;
+    width: 50%;
+    margin: 50px auto;
+}
+
 .search-container {
     background-color: grey;
     padding: 10px;
     border-radius: 10px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
     font-family: "arial";
@@ -11,18 +17,14 @@
 
 .select-container {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+
 }
 
 .select {
-    min-width: 200px;
+    width: 300px;
 }
 
-.search-container button {
-    background-color: rgb(67, 67, 233);
-    color: white;
-    border: none;
-    padding: 0 40px;
-    border-radius: 10px;
+img {
+    max-width: 500px;
 }
