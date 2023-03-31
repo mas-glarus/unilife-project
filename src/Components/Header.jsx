@@ -39,12 +39,18 @@ const Header = () => {
       </label>
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <div className="menu-dropdown">
-          <button className="shortlist">
-            <AiOutlineHeart /> <span>Shortlist</span>
-          </button>
-          <Link to="/contact" className="contact-us">
-            <FaRegEnvelope /> <span>Contact Us</span>
-          </Link>
+          <div className='mobile-nav'>
+            <Link to="/">Home</Link>
+            <Link to="/all-cities">All Cities</Link>
+          </div>
+          <div className='favourites'>
+            <button className="shortlist">
+              <AiOutlineHeart /> <span>Shortlist</span>
+            </button>
+            <Link to="/contact" className="contact-us">
+              <FaRegEnvelope /> <span>Contact Us</span>
+            </Link>
+          </div>
         </div>
       </div>
       

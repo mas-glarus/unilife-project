@@ -13,7 +13,7 @@
     right: 0;
     background-color: #42afff;
     padding: 0.5rem;
-    width: 100%;
+    width: 190%;
     text-align: center;
     z-index: 999;
 }
@@ -29,6 +29,21 @@
 
 .menu-dropdown a:hover {
   transform: scale(1.05);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mobile-nav a {
+  display: flex;
+  align-items: right;
+  justify-content: end;
+  
 }
 
 
@@ -143,6 +158,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    .mobile-menu.open .favourites {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content:flex-start;
+      border-top: 1px solid #fff;
     }
 
     .hamburger:checked ~ .mobile-menu {
