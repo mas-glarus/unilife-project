@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import Header from "../Components/Header";
+
 
 const Navbar = () => {
 	return (
@@ -16,6 +16,7 @@ const RootLayout = () => {
 	return (
 		<div className="app">
 			<Outlet />
+			<Navbar />
 		</div>
 	);
 };
