@@ -1,5 +1,6 @@
 import React from 'react';
-import "../styles/HeroAllCities.css";
+import "../styles/HeroAllCities.css?v=1";
+
 
 const HeroAllCities = () => {
   return (
@@ -7,7 +8,8 @@ const HeroAllCities = () => {
       <img src="../src/assets/hero-img.jpg" alt="hero" />
       <div className='title'>
         <h1>Student Accommodation</h1>
-        <p>UniLife have student accommodation available across the UK. Whatever you're after, we can help you find the right student accommodation for you.</p>
+        <p>UniLife have student accommodation available across the UK.</p> 
+         <p >Whatever you're after, we can help you find the right student accommodation for you.</p>
       </div>
     </div>
   );
