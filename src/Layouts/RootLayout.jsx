@@ -1,6 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 const Navbar = () => {
 	return (
 		<nav className="navbar">
@@ -15,8 +18,13 @@ const Navbar = () => {
 const RootLayout = () => {
 	return (
 		<div className="app">
+<<<<<<< HEAD
 			<Outlet />
 			<Navbar />
+=======
+			<Navbar />
+			<Outlet />
+>>>>>>> main
 		</div>
 	);
 };
