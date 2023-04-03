@@ -1,0 +1,30 @@
+.test-log {
+    background-color: bisque;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.search-container {
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: "arial";
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.select {
+    width: 300px;
+}
+
+img {
+    max-width: 500px;
+}
