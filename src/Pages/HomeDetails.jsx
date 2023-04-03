@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react';
+import Header from '../Components/Header';
+
+const HomeDetails = () => {
+	return (
+		<Header/>
+	);
+};
+
+export default HomeDetails;
+=======
 const HomeDetails = () => {
 	return (
 		<div>
@@ -7,3 +19,4 @@ const HomeDetails = () => {
 };
 
 export default HomeDetails;
+>>>>>>> main

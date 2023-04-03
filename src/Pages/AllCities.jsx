@@ -1,3 +1,16 @@
+
+import React from 'react';
+import Header from '../Components/Header';
+import HeroAllCities from '../Components/HeroAllCities';
+const AllCities = () => {
+	return (
+		<>
+		<Header/>
+		<HeroAllCities/>
+		</>
+	);
+};
+
 import { useContext } from "react";
 import GridCityName from "../Components/GridCityName";
 import { CityContext } from "../Context/CityContext";
