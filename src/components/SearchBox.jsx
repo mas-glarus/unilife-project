@@ -47,7 +47,7 @@ const SearchBox = () => {
 					/>
 				</div>
 			</div>
-			<img src={selectedValue.image_url} />
+
 		</div>
 	);
 };
