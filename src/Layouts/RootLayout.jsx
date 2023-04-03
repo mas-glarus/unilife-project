@@ -16,6 +16,7 @@ const RootLayout = () => {
 		<div className="app">
 			<Navbar />
 			<Outlet />
+			
 		</div>
 	);
 };
