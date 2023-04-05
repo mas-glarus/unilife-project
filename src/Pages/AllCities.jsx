@@ -5,6 +5,7 @@ import HeroAllCities from '../Components/HeroAllCities';
 import { useContext } from "react";
 import GridCityName from "../Components/GridCityName";
 import { CityContext } from "../Context/CityContext";
+import Footer from "../Components/Footer";
 
 const AllCities = () => {
 	const { cityinfo } = useContext(CityContext)
@@ -15,6 +16,7 @@ const AllCities = () => {
 			<Header/>
 		<HeroAllCities/>
 			<GridCityName />
+			<Footer />
 		</div>
 	);
 };
