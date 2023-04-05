@@ -1,13 +1,11 @@
 import Select from "react-select";
-import React, { useState , useContext} from "react";
-
+import React, { useState, useContext } from "react";
 
 import { CityContext } from "../Context/CityContext";
 
 import "../assets/searchbox.css";
 
 const SearchBox = () => {
-
 	const { cityinfo } = useContext(CityContext);
 
 	const [inputValue, setValue] = useState("");
@@ -25,7 +23,6 @@ const SearchBox = () => {
 
 	return (
 		<div>
-			<h1>Searchbox</h1>
 			<div className="test-log">
 				Selected Value: {JSON.stringify(selectedValue || {}, null, 2)}
 			</div>
@@ -33,20 +30,18 @@ const SearchBox = () => {
 				<div className="select-container">
 					<Select
 						value={selectedValue}
-						options = {cityinfo.map((city) => {return { value: city._id, label:city.name}})}
+						options={cityinfo.map((city) => {
+							return { value: city._id, label: city.name };
+						})}
 						onInputChange={handleInputChange}
 						onChange={handleChange}
 						className="select"
 						placeholder="Any City"
 					/>
-					<Select
-						className="select"
-						placeholder="Any Bedrooms"
-					/>
+					<Select className="select" placeholder="Any Bedrooms" />
 					<button>Find Homes</button>
 				</div>
 			</div>
-
 		</div>
 	);
 };

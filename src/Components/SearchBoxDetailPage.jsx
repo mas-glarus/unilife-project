@@ -54,10 +54,6 @@ const sampleData = {
 const SearchBoxDetailPage = () => {
 	return (
 		<div>
-			<h1>Searchbox Detail Page</h1>
-			<div className="test-log">
-				{/* Selected Value: {JSON.stringify(selectedValue || {}, null, 2)} */}
-			</div>
 			<div className="search-container">
 				<div className="select-container">
 					<div className="bedroom-container">
