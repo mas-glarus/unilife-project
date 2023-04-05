@@ -5,7 +5,8 @@
 }
 
 .search-container {
-    background-color: grey;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     max-width: 900px;
@@ -23,6 +24,7 @@
 
 .select {
     width: 300px;
+    overflow: visible;
 }
 
 img {

@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 import React from 'react';
 import Header from '../Components/Header';
 import HeroCity from '../Components/HeroCity';
+import SearchBoxDetailPage from "../Components/SearchBoxDetailPage"
 
 const CityDetails = () => {
 	return (
 		<>
 		<Header/>
 		<HeroCity/>
+		<SearchBoxDetailPage />
 		</>
 	);
 };
 
 export default CityDetails;
-=======
-const CityDetails = () => {
-	return (
-		<div>
-			<h1>City Details Page</h1>
-		</div>
-	);
-};
 
-export default CityDetails;
->>>>>>> main

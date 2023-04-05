@@ -20,19 +20,7 @@ function App() {
 			<Route index element={<HomePage />} />
 			<Route path="allCities" element={<AllCities />} />
 			<Route path="cityDetails" element={<CityDetails />} />
-			<Route path="homeDetails" element={<HomeDetails />} />
-
-				<Route index element={<HomePage />} />
-
-        <Route path="allCities" element={<AllCities />} />
-        <Route path="cityDetails" element={<CityDetails />} />
-        <Route path="homeDetails" element={<HomeDetails />} />
-
-
-				<Route path="allCities" element={<AllCities />} />
-				<Route path="cityDetails" element={<CityDetails />} />
-				<Route path="homeDetails" element={<HomeDetails />} />
-
+			<Route path="homeDetails" element={<HomeDetails />} /> 
 			</Route>
 		)
 	);

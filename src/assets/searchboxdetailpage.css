@@ -1,0 +1,25 @@
+.search-container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+
+.select-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.bedroom-container,
+.bathroom-container,
+.price-container,
+.type-container {
+    width: 20%;
+}
+
+#select-bedroom,
+#select-bathroom,
+#select-price,
+#select-type {
+    margin-top: 10px;
+}

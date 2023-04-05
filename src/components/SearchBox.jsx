@@ -1,11 +1,15 @@
 import Select from "react-select";
-import React, { useState } from "react";
-import getCities from "../api/getCities";
-import AsyncSelect from "react-select/async";
+import React, { useState , useContext} from "react";
+
+
+import { CityContext } from "../Context/CityContext";
 
 import "../assets/searchbox.css";
 
 const SearchBox = () => {
+
+	const { cityinfo } = useContext(CityContext);
+
 	const [inputValue, setValue] = useState("");
 	const [selectedValue, setSelectedValue] = useState(null);
 
@@ -19,13 +23,6 @@ const SearchBox = () => {
 		setSelectedValue(value);
 	};
 
-	const fetchData = () => {
-		return getCities.get("/cities").then((result) => {
-			const res = result.data.response;
-			return res;
-		});
-	};
-
 	return (
 		<div>
 			<h1>Searchbox</h1>
@@ -34,17 +31,19 @@ const SearchBox = () => {
 			</div>
 			<div className="search-container">
 				<div className="select-container">
-					<AsyncSelect
-						cacheOptions
-						defaultOptions
+					<Select
 						value={selectedValue}
-						getOptionLabel={(e) => e.name}
-						getOptionValue={(e) => e._id}
-						loadOptions={fetchData}
+						options = {cityinfo.map((city) => {return { value: city._id, label:city.name}})}
 						onInputChange={handleInputChange}
 						onChange={handleChange}
 						className="select"
+						placeholder="Any City"
 					/>
+					<Select
+						className="select"
+						placeholder="Any Bedrooms"
+					/>
+					<button>Find Homes</button>
 				</div>
 			</div>
 
