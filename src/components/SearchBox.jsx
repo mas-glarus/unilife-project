@@ -1,6 +1,8 @@
 import Select from "react-select";
 import React, { useState, useContext } from "react";
 import { CityContext } from "../Context/CityContext";
+import {useNavigate} from 'react-router-dom';
+
 
 import "../assets/searchbox.css";
 
@@ -9,6 +11,15 @@ const SearchBox = () => {
 
 	const [inputValue, setValue] = useState("");
 	const [selectedValue, setSelectedValue] = useState(null);
+
+	//Navigation to cityDetails with an onClick on "find Homes" button
+	const navigate = useNavigate();
+
+	const navigateToDetails = () => {
+	  // 👇️ navigate to /contacts
+	  navigate('/cityDetails');
+	};
+	//-------------
 
 	//handle input change event
 	const handleInputChange = (value) => {
@@ -38,7 +49,7 @@ const SearchBox = () => {
 						placeholder="Any City"
 					/>
 					<Select className="select" placeholder="Any Bedrooms" />
-					<button>Find Homes</button>
+					<button onClick={navigateToDetails}>Find Homes</button>
 				</div>
 			</div>
 		</div>
