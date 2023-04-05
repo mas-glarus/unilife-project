@@ -1,6 +1,5 @@
 import Select from "react-select";
 import React, { useState, useContext } from "react";
-
 import { CityContext } from "../Context/CityContext";
 
 import "../assets/searchbox.css";

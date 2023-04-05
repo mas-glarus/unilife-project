@@ -6,7 +6,6 @@ export const CityContext = createContext();
 const CityContextProvider = ({ children }) => {
 
     const [cityinfo, setcityinfo] = useState([]);
-    const [properties, setProperties] = useState([]);
    
     useEffect(() => {
 

@@ -1,6 +1,7 @@
 import Select from "react-select";
 import React, { useState, useContext } from "react";
 
+
 import "../assets/searchboxdetailpage.css";
 
 const sampleData = [
@@ -44,15 +45,56 @@ const sampleData = [
 		createdAt: "2022-10-05T08:49:52.082Z",
 		updatedAt: "2022-10-05T08:49:52.082Z",
 	},
+	{
+		_id: "633d453061f49f86a21caa11",
+		city_id: "Test",
+		key_features: [
+			"Modern Quartz Counter Tops",
+			"Remodelled Bathrooms",
+			"Two Reception Rooms",
+			"Lift & Secure Entrance",
+			"City Centre Location",
+		],
+		property_type: "Apartment",
+		property_description:
+			"We are proud to bring to the market this well presented home in Newcastle. This home is perfect for professionals or students for high quality, City Centre living. Recently remodeled and tastefully furnished in true Newcastle fashion, this awesome home boasts a unique charm, with many of the original features and woodwork from its over-a-century-year-old building still intact.",
+		bedroom_count: 6,
+		bathroom_count: 3,
+		deposit: 700,
+		rent: 1200,
+		availability: "December",
+		address: {
+			street: "Keesey Street",
+			city: "Newcastle",
+			postcode: "NS6 2AE",
+		},
+		images: [
+			"http://res.cloudinary.com/blackeagle4894/image/upload/v1617840993/wzzppjcc8usmohnbwjpq.jpg",
+			"http://res.cloudinary.com/blackeagle4894/image/upload/v1617840997/rdsj2xt51tlt6rhmc7ve.jpg",
+			"http://res.cloudinary.com/blackeagle4894/image/upload/v1617841000/dxhussdtiomttecbgmtf.jpg",
+			"http://res.cloudinary.com/blackeagle4894/image/upload/v1617841002/liyinvzeeh3kqi1fuu17.jpg",
+		],
+		furnished: "Unfurnished",
+		bedroom_prices: {
+			bedroom_one: 200,
+			bedroom_two: 200,
+			bedroom_three: 200,
+			bedroom_four: 200,
+		},
+		__v: 0,
+		createdAt: "2022-10-05T08:49:52.082Z",
+		updatedAt: "2022-10-05T08:49:52.082Z",
+	},
 ];
 
 const SearchBoxDetailPage = () => {
+
 	return (
 		<div>
 			<div className="search-container">
 				<div className="select-container">
 					<div className="bedroom-container">
-						<label for="select-bedroom">
+						<label htmlFor="select-bedroom">
 							Any bedroom:
 							<Select
 								id="select-bedroom"
@@ -67,7 +109,7 @@ const SearchBoxDetailPage = () => {
 						</label>
 					</div>
 					<div className="bathroom-container">
-						<label for="select-bathroom">
+						<label htmlFor="select-bathroom">
 							Any bathroom:
 							<Select
 								id="select-bathroom"
@@ -82,7 +124,7 @@ const SearchBoxDetailPage = () => {
 						</label>
 					</div>
 					<div className="price-container">
-						<label for="select-price">
+						<label htmlFor="select-price">
 							Any price:
 							<Select
 								id="select-price"
@@ -94,7 +136,7 @@ const SearchBoxDetailPage = () => {
 						</label>
 					</div>
 					<div className="type-container">
-						<label for="select-type">
+						<label htmlFor="select-type">
 							Any type:
 							<Select
 								id="select-type"
