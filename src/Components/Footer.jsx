@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import {
+// 	AiFillInstagram,
+// 	AiFillTwitterCircle,
+// 	AiOutlineCopyrightCircle,
+// } from "react-icons/ai";
+// import { BsFacebook } from "react-icons/bs";
 
-import footer from "../styles/Footer.css";
+import FooterStyles from "../styles/FooterStyles.css";
 
 const Footer = () => {
 	return (
