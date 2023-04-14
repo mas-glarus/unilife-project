@@ -10,13 +10,13 @@
     justify-content: center;
 }
 
-h3 {
+.compare-container h3 {
     font-size: 2.5rem;
     font-weight: 400;
     margin-top: 0;
 }
 
-h4 {
+.compare-container h4 {
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -58,12 +58,12 @@ h4 {
         margin-bottom: 4rem;
     }
 
-    h3 {
+    .compare-container h3 {
         font-size: 2rem;
         text-align: center;
     }
 
-    h4 {
+    .compare-container h4 {
         margin-bottom: .5rem;
     }
 }
