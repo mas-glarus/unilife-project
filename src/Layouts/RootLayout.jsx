@@ -16,9 +16,6 @@ const RootLayout = () => {
 	return (
 		<div className="app">
 
-			<Outlet />
-			<Navbar />
-
 			<Navbar />
 			<Outlet />
 
