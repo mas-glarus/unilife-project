@@ -10,6 +10,7 @@
     padding: 10px;
     border-radius: 10px;
     max-width: 900px;
+    width: 90%;
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,14 @@
 
 }
 
+.select-container button {
+    background-color: #3A5295;
+    color: white;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+}
+
 .select {
     width: 300px;
     overflow: visible;
@@ -29,4 +38,23 @@
 
 img {
     max-width: 500px;
+}
+
+@media screen and (max-width: 820px) {
+
+    .select-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    .select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .select-container button {
+        min-width: 30%;
+        margin: 0 auto;
+    }
 }

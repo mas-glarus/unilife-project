@@ -19,6 +19,10 @@ footer {
     width: 40%;
 }
 
+.socials-left p {
+    line-height: 150%;
+}
+
 .socials-left input {
     width: 100%;
     border-radius: .5rem;
@@ -89,4 +93,45 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 3rem 0;
+    }
+
+    .socials div {
+        width: 80%;
+    }
+
+    .socials-left{
+        margin-bottom: 2rem;
+    }
+
+    .facebook,
+    .twitter,
+    .instagram {
+        margin-top: 1rem;
+    }
+
+    .about-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-left p{
+        margin: .5rem 0;
+    }
 }
