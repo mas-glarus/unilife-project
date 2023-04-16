@@ -20,7 +20,7 @@ function App() {
 			<Route index element={<HomePage />} />
 			<Route path="allCities" element={<AllCities />} />
 			<Route path="cityDetails/:id" element={<CityDetails />} />
-			<Route path="homeDetails" element={<HomeDetails />} />
+			<Route path="homeDetails/:idProp" element={<HomeDetails />} />
 
 			</Route>
 		)

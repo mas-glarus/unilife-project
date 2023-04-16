@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 
 const HomesPerCityGridItem = ({property}) => {
@@ -19,13 +19,13 @@ const HomesPerCityGridItem = ({property}) => {
             </div>
             <div className="furnished">
                 <div >
-                    <span>Detached</span><span>{property.furnished}</span></div>
+                    <span>{property.property_type}</span><span>{property.furnished}</span></div>
                 <address>{property.address.street}, { property.address.city }, {property.address.postcode}</address>
 
             </div>
-            <button>
+            <Link to={"../homeDetails/" + property._id}><button>
                 View Home
-            </button>
+            </button></Link>
         </div>
 
     )

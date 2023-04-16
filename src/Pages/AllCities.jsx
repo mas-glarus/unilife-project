@@ -8,8 +8,6 @@ import GridAllCities from '../Components/GridAllCities';
 
 const AllCities = () => {
 
-	const { cityinfo } = useContext(CityContext)
-
 	return (
 
 		<>
