@@ -6,7 +6,7 @@ const Navbar = () => {
 		<nav className="navbar">
 			<NavLink to="/">Home</NavLink>
 			<NavLink to="allCities">All Cities</NavLink>
-			<NavLink to="cityDetails">City Details</NavLink>
+			<NavLink to="cityDetails/:id">City Details</NavLink>
 			<NavLink to="homeDetails">Home Details</NavLink>
 		</nav>
 	);
@@ -15,9 +15,6 @@ const Navbar = () => {
 const RootLayout = () => {
 	return (
 		<div className="app">
-
-			<Outlet />
-			<Navbar />
 
 			<Navbar />
 			<Outlet />

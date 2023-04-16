@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Header.css?v=1';
+import '../styles/Header.css';
 import { Link } from 'react-router-dom';
 import { FaRegEnvelope } from 'react-icons/fa';
 import { AiOutlineHeart } from 'react-icons/Ai';

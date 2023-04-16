@@ -6,12 +6,15 @@ import './styles/index.css'
 
 import CityContextProvider from './Context/CityContext'
 import './index.css'
+// import PropertiesContextProvider from './Context/PropertiesContext'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CityContextProvider>
-      <App />
+      {/* <PropertiesContextProvider> */}
+        <App />
+      {/* </PropertiesContextProvider> */}
     </CityContextProvider>
   </React.StrictMode>,
 )

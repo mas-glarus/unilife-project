@@ -1,26 +1,19 @@
-<<<<<<< HEAD
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from '../Components/Header';
 import HeroCity from '../Components/HeroCity';
+import { useParams } from 'react-router-dom';
+import HomesPerCityGrid from '../Components/HomesPerCityGrid';
 
 const CityDetails = () => {
+	
 	return (
 		<>
 		<Header/>
 		<HeroCity/>
+		<HomesPerCityGrid/> 
 		</>
 	);
 };
 
 export default CityDetails;
-=======
-const CityDetails = () => {
-	return (
-		<div>
-			<h1>City Details Page</h1>
-		</div>
-	);
-};
 
-export default CityDetails;
->>>>>>> main

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-const CityCard = ({city}) => {
+const HomepageGridItem = ({city}) => {
 
 
     const imgurl = {
@@ -14,11 +14,11 @@ const CityCard = ({city}) => {
 
     return (
         <>
-          <Link to='cityDetails'><div style={imgurl} className="grid-item">
+          <Link to={"cityDetails/"+ city._id}><div style={imgurl} className="Homepagegrid-item">
                 <h2>{city.name}<br/>{city.property_count} properties</h2>
             </div></Link>
         </>
     )
 }
 
-export default CityCard;
+export default HomepageGridItem;
