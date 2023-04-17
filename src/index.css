@@ -1,10 +1,5 @@
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
-/* this symbol * means, every element inside the grid-item */
+/* this symbol * means, every element inside the grid-item/div */
 
 /* CSS for the Homepage */
 .Homepagegrid-item > h2 {
@@ -19,13 +14,19 @@ a {
   text-decoration: none;
 }
 
+.allcitiesbtndiv > h2 {
+  margin: 0 20px;
+}
+
 .allcitiesbtn {
+  position: relative;
+  left: 46%;
   text-align: center;
-  border: none;
+  border: solid 1px;
   border-radius: 8px;
   padding: 12px;
   color: white;
-  background-color: rgba(7, 7, 155, 0.603);  
+  background-color: rgba(7, 7, 155, 0.603);
 }
 /* Until here */
 
@@ -45,8 +46,11 @@ a {
 /* css for the citydetails */
 
 .cityhomesdetails > * {
-
   font-weight: bold;
+}
+
+.cityhomesdetails * button:hover{ 
+  filter: brightness(70%);
 }
 
 /* Until here */
@@ -62,7 +66,7 @@ a {
   .Homepagegrid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
+    gap: 20px;
     justify-items: center;
     align-items: center;
     /* place-items: center; */
@@ -101,57 +105,80 @@ a {
   /* Hasta aquí */
 
   /* Responsive para Desktop, CitiesDetailsGrid */
+  .citydetaildiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .citydetaildiv > h3 {
+    width: 100%;
+    margin: 3% 0 0 20%;
+  }
 
   .grid-container-properties {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-    justify-items: center;
-    align-items: center;
-    margin: 50px;
-    border: solid 1px;
+    column-gap: 30px;
+    row-gap: 50px;
+    margin: 20px 30px;
     padding: 20px;
   }
 
   .cityhomesdetails {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    border: solid 1px;
+    justify-content: center;
     border-radius: 16px;
     width: 20em;
-    height: auto;
+    height: 23em;
   }
 
   .cityhomesdetails > img {
     border-radius: 16px 16px 0 0;
-    width: 100%;  
-    height: 12em;
+    width: 20em;  
+    height: 13em;
   }
   
-  .cityhomesdetails * button, a {
-    border-radius: 16px ; 
+  .cityhomesdetails * button {
+    border-radius: 0 0 16px 16px; 
+    border: solid 1px gray;
     padding: 10px;
-    
+    width: 100%;
+    height: 100%;
   }
 
   .pricebedbathflex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
     color: white;
-    background-color: rgba(7, 7, 155, 0.603);
-    padding: 15px;
+    background-color: rgba(6, 29, 243, 0.616);
+    padding: 12px;
   }
 
-  .bebathflex {
+  .bedbathflex {
     display: flex;
     justify-content: space-between;
+    width: 30%;
   }
 
   .furnished {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     padding: 15px;
-    
+    border: solid 1px gray;
+    border-bottom: none;
+  }
+
+  .type-furnished {
+    display: flex;
+    justify-content: space-between;
+  }
+  .furnished > address {
+    font-weight: lighter;
+    padding: 20px 0 0 0;
   }
 
   /* Hastaa aquí */
@@ -192,21 +219,22 @@ a {
   /* until here */
 }
 
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (min-width: 599px) and (max-width: 1024px) {
   /* Responsive para Tablet, Homepage grid */
   .Homepagegrid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     place-items: center;
-    padding: 30px 0;
+    padding: 30px 30px;
+    margin: 0 20px;
   }
 
   .Homepagegrid-item {
     border-radius: 16px;
     padding: 20px 10px;
-    width: 14em;
-    height: 8em;
+    width: 15em;
+    height: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,27 +261,32 @@ a {
   }
   /* Until here */
   /* Responsive para Tablet, CityHomesGrid */
+  
+  .citydetaildiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .citydetaildiv > h3 {
+    width: 100%;
+    margin: 3% 0 0 20%;
+  }
 
   .grid-container-properties {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 30px;
-    justify-items: center;
-    align-items: center;
-    margin: 50px;
-    border: solid 1px;
+    gap: 30px;
     padding: 20px;
   }
 
   .cityhomesdetails {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    border: solid 1px;
+    justify-content: center;
     border-radius: 16px;
     width: 20em;
-    height: auto;
+    height: 23em;
   }
 
   .cityhomesdetails > img {
@@ -262,32 +295,52 @@ a {
     height: 12em;
   }
   
-  .cityhomesdetails > button {
-    border-radius: 0 0 16px 16px ; 
+  .cityhomesdetails * button {
+    border-radius: 0 0 16px 16px; 
+    border: solid 1px gray;
     padding: 10px;
-  }
-  .pricebedbathflex {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    background-color: rgba(7, 7, 155, 0.603);
-    padding: 15px;
+    width: 100%;
+    height: 100%;
   }
 
-  .bebathflex {
+  .pricebedbathflex {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    background-color: rgba(6, 29, 243, 0.616);
+    padding: 12px;
+  }
+
+  .bedbathflex {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px;
+    width: 30%;
   }
 
   .furnished {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     padding: 15px;
-    
+    border: solid 1px gray;
+    border-bottom: none;
+  }
+
+  .type-furnished {
+    display: flex;
+    justify-content: space-between;
+  }
+  .furnished > address {
+    font-weight: lighter;
+    padding: 20px 0 0 0;
   }
 
   /* Hasta aquí */
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 598px) {
   /* Responsive para el phone, HomepageGrid */
   .Homepagegrid-container {
     display: grid;
@@ -309,6 +362,7 @@ a {
   }
   /* Hasta aquí */
   /* Responsive para Phone, Allcities grid */
+
   .grid-allcities-name {
     border: solid 1px;
     display: grid;
@@ -317,6 +371,7 @@ a {
     margin: 30px;
     padding: 20px;
   }
+
   .grid-item-name {
     border: solid 1px gray;
     border-radius: 16px;
@@ -326,9 +381,22 @@ a {
     font-size: 24px;
     text-align: center;
   }
+
   /* Until here */
 
   /* Responsive para Phone, CityHomesGrid */
+
+  .citydetaildiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  .citydetaildiv > h3 {
+    width: 100%;
+    margin: 3% 0 0 20%;
+  }
 
   .grid-container-properties {
     display: grid;
@@ -341,15 +409,13 @@ a {
     padding: 20px;
   }
 
-  .cityhomesdetails {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch;
-    border: solid 1px;
-    border-radius: 16px;
-    width: 20em;
-    height: auto;
+ .cityhomesdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 16px;
+  width: 20em;
+  height: 23em;
   }
 
   .cityhomesdetails > img {
@@ -358,26 +424,47 @@ a {
     height: 12em;
   }
   
-  .cityhomesdetails > button {
-    border-radius: 0 0 16px 16px ; 
+  .cityhomesdetails * button {
+    border-radius: 0 0 16px 16px; 
+    border: solid 1px gray;
     padding: 10px;
-  }
-  .pricebedbathflex {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    background-color: rgba(7, 7, 155, 0.603);
-    padding: 15px;
+    width: 100%;
+    height: 100%;
   }
 
-  .bebathflex {
+  .pricebedbathflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    background-color: rgba(6, 29, 243, 0.616);
+    padding: 12px;
+  }
+
+  .bedbathflex {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px;
+    width: 30%;
+  }
+
+  .furnished {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    border: solid 1px gray;
+    border-bottom: none;
+  }
+  
+  .type-furnished {
     display: flex;
     justify-content: space-between;
   }
 
-  .furnished {
-    padding: 15px;
-    
+  .furnished > address {
+    font-weight: lighter;
+    padding: 20px 0 0 0;
   }
 
   /* Hasta aquí */

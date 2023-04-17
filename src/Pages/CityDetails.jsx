@@ -5,7 +5,6 @@ import HomesPerCityGrid from '../Components/HomesPerCityGrid';
 
 const CityDetails = () => {
 	
-
 	return (
 		<>
 		<Header/>

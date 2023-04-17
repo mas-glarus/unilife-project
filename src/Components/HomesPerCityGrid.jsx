@@ -9,6 +9,7 @@ const HomesPerCityGrid = () => {
     const { id } = useParams();
 
     const [properties, setProperties] = useState([]);
+    const { cityinfo } = useContext(CityContext);
 
     if (id !== undefined) {
 
@@ -20,12 +21,18 @@ const HomesPerCityGrid = () => {
 
     }
 
+    
+
+    
+    console.log(cityinfo)
     console.log(properties);
     return (
-
-        <div className='grid-container-properties'>
-        {properties.map((property) => <HomesPerCityGridItem property={property} key={property._id} /> )} 
-    </div>
+        <div className="citydetaildiv">
+            <h3>{cityinfo.map((city) => (id == city._id ? (city.property_count + " homes in " + city.name) : (undefined) ))}</h3>
+            <div className='grid-container-properties'>
+                {properties.map((property) => <HomesPerCityGridItem property={property} key={property._id} /> )} 
+            </div>
+        </div>
     )
 }
 
