@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import {
-// 	AiFillInstagram,
-// 	AiFillTwitterCircle,
-// 	AiOutlineCopyrightCircle,
-// } from "react-icons/ai";
-// import { BsFacebook } from "react-icons/bs";
+import facebook from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import twitter from "../assets/twitter.svg";
+import copyright from "../assets/copyright.svg";
 
 import FooterStyles from "../styles/FooterStyles.css";
 
@@ -25,15 +23,15 @@ const Footer = () => {
 					<div className="socials-right">
 						<h6>Let's Socialize</h6>
 						<Link to="/facebook" className="facebook">
-							{/* <FAFacebook /> */}
+							<img src={facebook}/>
 							<span>Facebook</span>
 						</Link>
 						<Link to="/twitter" className="twitter">
-							{/* <AiFillTwitterCircle /> */}
+						<img src={twitter}/>
 							<span>Twitter</span>
 						</Link>
 						<Link to="/instagram" className="instagram">
-							{/* <AiFillInstagram /> */}
+						<img src={instagram}/>
 							<span>Instagram</span>
 						</Link>
 					</div>
@@ -49,7 +47,7 @@ const Footer = () => {
 					<div className="about-right">
 						<p>2022</p>
 						<Link to="/copyright" className="copyright">
-							{/* <AiOutlineCopyrightCircle /> */}
+							<img src={copyright}/>
 							<span>unilife</span>
 						</Link>
 					</div>

@@ -36,6 +36,11 @@ footer {
     justify-content: space-between;
 }
 
+.socials-right img {
+    width: 1.3rem;
+    filter: invert(1);
+}
+
 .socials-right span {
     margin-left: .5rem;
 }
@@ -93,6 +98,12 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+.copyright img {
+    filter: invert(0.5);
+    width: 1rem;
+    margin-right: .25rem;
 }
 
 @media screen and (max-width: 768px) {
