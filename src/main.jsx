@@ -5,7 +5,7 @@ import App from './App'
 import './styles/index.css'
 
 import CityContextProvider from './Context/CityContext'
-import './index.css'
+import './styles/pablocss.css'
 // import PropertiesContextProvider from './Context/PropertiesContext'
 
 
