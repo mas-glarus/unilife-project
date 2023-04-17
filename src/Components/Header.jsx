@@ -6,6 +6,7 @@ import { AiOutlineHeart } from 'react-icons/Ai';
 import logo from '../assets/UniLife.png';
 import vector from '../assets/Vector.svg';
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -53,7 +54,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      
     </header>
   );
 };
