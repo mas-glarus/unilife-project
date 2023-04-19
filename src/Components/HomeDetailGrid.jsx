@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBath, faBed, faHeart, faPoundSign} from "@fortawesome/free-solid-svg-icons";
+import {faBath, faBed, faCheck, faHeart, faPoundSign} from "@fortawesome/free-solid-svg-icons";
 
 
 const HomeDetailGrid = () => {
@@ -33,8 +33,8 @@ const HomeDetailGrid = () => {
     return (
        <>
         {isLoading ? (<p>Cargando...</p>
-        ) : (
-            
+        ) : (<>
+            <Link to={"/cityDetails/" + homedetails.city_id._id }><button>Back to search</button></Link>
             <div className="homedetailflex">
                 <div className="big-img">
                     <img src={homedetails.images[0]}/>
@@ -60,7 +60,33 @@ const HomeDetailGrid = () => {
                     <div className="btns"><button><FontAwesomeIcon icon={faHeart}/>  Shortlist</button><button className="btnblue">Book a Wiewing</button></div>
                 </div>
             </div> 
-            
+            <div className="homedetail-flex">
+                <div className="homedetail-desc">
+                    <h3>Description</h3>
+                    <p>{homedetails.property_description}</p>
+                </div>
+                <div className="homedetail-bedroomprices">
+                    <h3>Bedroom Prices</h3>
+                    <div className="homedetail-table">
+                        <div><span>Bedroom 1</span><span><FontAwesomeIcon icon={faPoundSign}/> {homedetails.bedroom_prices.bedroom_one}</span></div><hr></hr>
+                        <div><span>Bedroom 2</span><span><FontAwesomeIcon icon={faPoundSign}/> {homedetails.bedroom_prices.bedroom_two}</span></div><hr></hr>
+                        <div><span>Bedroom 3</span><span><FontAwesomeIcon icon={faPoundSign}/> {homedetails.bedroom_prices.bedroom_three}</span></div><hr></hr>
+                        <div><span>Bedroom 4</span><span><FontAwesomeIcon icon={faPoundSign}/> {homedetails.bedroom_prices.bedroom_four}</span></div><hr></hr>
+                        <div><span>Bedroom 5</span><span><FontAwesomeIcon icon={faPoundSign}/> {homedetails.bedroom_prices.bedroom_five}</span></div>
+                    </div>
+                </div>
+                <div className="homedetail-keyfeatures">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>{homedetails.key_features[0]} <FontAwesomeIcon icon={faCheck}/></li>
+                        <li>{homedetails.key_features[1]} <FontAwesomeIcon icon={faCheck}/></li>
+                        <li>{homedetails.key_features[2]} <FontAwesomeIcon icon={faCheck}/></li>
+                        <li>{homedetails.key_features[3]} <FontAwesomeIcon icon={faCheck}/></li>
+                        <li>{homedetails.key_features[4]} <FontAwesomeIcon icon={faCheck}/></li>
+                    </ul>
+                </div>
+            </div>
+            </>
             )}
         </>
     )
