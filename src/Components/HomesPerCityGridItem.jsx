@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBath, faBed, faHouse, faLocationDot} from "@fortawesome/free-solid-svg-icons";
+import {faBath, faBed, faHouse, faLocationDot, faPoundSign} from "@fortawesome/free-solid-svg-icons";
 
 const HomesPerCityGridItem = ({property}) => {
     
@@ -11,7 +11,7 @@ const HomesPerCityGridItem = ({property}) => {
         <div className="cityhomesdetails">
             <img src={property.images[random]}/>
             <div className="pricebedbathflex">
-                <span> ${property.bedroom_prices.bedroom_one}<br/>pppw including bills</span>
+                <span> <FontAwesomeIcon icon={faPoundSign}/>{property.bedroom_prices.bedroom_one}<br/>pppw including bills</span>
                 
                 <div className="bedbathflex">
                     <span><FontAwesomeIcon icon={faBed}/>  {property.bedroom_count}</span>

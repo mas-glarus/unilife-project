@@ -21,11 +21,6 @@ const HomesPerCityGrid = () => {
 
     }
 
-    
-
-    
-    console.log(cityinfo)
-    console.log(properties);
     return (
         <div className="citydetaildiv">
             <h3>{cityinfo.map((city) => (id == city._id ? (city.property_count + " homes in " + city.name) : (undefined) ))}</h3>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faBath, faBed, faHeart, faPoundSign} from "@fortawesome/free-solid-svg-icons";
 
 
 const HomeDetailGrid = () => {
@@ -32,28 +34,33 @@ const HomeDetailGrid = () => {
        <>
         {isLoading ? (<p>Cargando...</p>
         ) : (
-            <div>
-                <div className="homedetailflex">
-                    <div>
-                        <img src={homedetails.images[random1]}/>
-                        <div>
-
+            
+            <div className="homedetailflex">
+                <div className="big-img">
+                    <img src={homedetails.images[0]}/>
+                    <div className="small-img">
+                        <img src={homedetails.images[1]}/>
+                        <img src={homedetails.images[2]}/>
+                        <img src={homedetails.images[3]}/>
+                         
+                    </div>
+                </div>    
+                <div className="homedetailbtns" >
+                    <div className="homeinfoflex">
+                        <address> {homedetails.address.street}, {homedetails.address.city}, {homedetails.address.postcode}</address>
+                        <div className="homeinfocard">
+                            <p>Bedrooms<br/><br/><span className="homedetailspan"><FontAwesomeIcon icon={faBed}/>  {homedetails.bedroom_count}</span></p>
+                            <p>Bathrooms<br/><br/><span className="homedetailspan"><FontAwesomeIcon icon={faBath}/>  {homedetails.bathroom_count}</span></p>
+                            <p>Property Type<br/><br/><span className="homedetailspan">{homedetails.property_type}</span></p>
+                            <p>Price<br/><br/><span className="homedetailspan"><FontAwesomeIcon icon={faPoundSign}/> {homedetails.rent}</span></p>
+                            <p>Furnished type<br/><br/><span className="homedetailspan">{homedetails.furnished}</span></p>
+                            <p>Available from<br/><br/><span className="homedetailspan">{homedetails.availability}</span></p>
                         </div>
                     </div>
-                <div className="homeinfoflex">
-                    <address> {homedetails.address.street}, {homedetails.address.city}, {homedetails.address.postcode}</address>
-                    <div className="homeinfocard">
-                        <span>Bedrooms<br/>{homedetails.bedroom_count}</span>
-                        <span>Bathrooms<br/>{homedetails.bathroom_count}</span>
-                        <span>Property Type<br/>{homedetails.property_type}</span>
-                        <span>Price<br/>{homedetails.rent}</span>
-                        <span>Furnished type<br/>{homedetails.furnished}</span>
-                        <span>Available from<br/>{homedetails.availability}</span>
-                    </div>
-
-                </div> 
-                </div> 
-            </div>
+                    <div className="btns"><button><FontAwesomeIcon icon={faHeart}/>  Shortlist</button><button className="btnblue">Book a Wiewing</button></div>
+                </div>
+            </div> 
+            
             )}
         </>
     )
