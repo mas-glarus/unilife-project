@@ -1,7 +1,7 @@
 import React from "react";
 import groupFoto from "../assets/groupfoto.png";
 
-import BeingAStudentStyles from "../styles/BeingAStudentStyles.css";
+import "../styles/BeingAStudentStyles.css";
 
 const BeingAStudent = () => {
 	return (

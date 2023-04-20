@@ -3,7 +3,7 @@ import searchImg from "../assets/search.png"
 import compareImg from "../assets/compare.png"
 import billsImg from "../assets/bills.png"
 
-import CompareStyles from "../styles/CompareStyles.css";
+import "../styles/CompareStyles.css";
 
 const Compare = () => {
 	return (

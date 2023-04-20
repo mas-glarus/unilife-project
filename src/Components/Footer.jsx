@@ -5,7 +5,7 @@ import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
 import copyright from "../assets/copyright.svg";
 
-import FooterStyles from "../styles/FooterStyles.css";
+import "../styles/FooterStyles.css";
 
 const Footer = () => {
 	return (

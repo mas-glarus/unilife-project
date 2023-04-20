@@ -3,7 +3,7 @@ import selectionImg from "../assets/bestSelection.png";
 import heartImg from "../assets/heart.png";
 import menImg from "../assets/men.png";
 
-import SearchAndCompareStyles from "../styles/SearchAndCompareStyles.css";
+import "../styles/SearchAndCompareStyles.css";
 
 const SearchAndCompare = () => {
 	return (
