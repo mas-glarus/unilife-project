@@ -1,14 +1,16 @@
-import React from 'react';
-import Header from '../Components/Header';
-import HeroCity from '../Components/HeroCity';
+import React from "react";
+import Header from "../Components/Header";
+import HeroCity from "../Components/HeroCity";
+import BeingAStudent from "../Components/BeingAStudent";
 import Footer from "../Components/Footer";
 
 const CityDetails = () => {
 	return (
 		<>
-		<Header/>
-		<HeroCity/>
-		<Footer/>
+			<Header />
+			<HeroCity />
+			<BeingAStudent />
+			<Footer />
 		</>
 	);
 };

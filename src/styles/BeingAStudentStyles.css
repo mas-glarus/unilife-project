@@ -1,0 +1,52 @@
+section {
+    width: 90%;
+    margin: 5rem auto;
+    background-color: #F6FAFD;
+    border-radius: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 5rem auto;
+    padding: 2rem;
+}
+
+.text {
+    width: 40%;
+}
+
+.text h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.text p {
+    line-height: 150%;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .groupfoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .groupfoto img {
+        width: 90%;
+    }
+}
