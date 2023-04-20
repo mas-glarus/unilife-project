@@ -1,14 +1,16 @@
 
 import React from 'react';
 import Header from '../Components/Header';
-import { useParams } from 'react-router-dom';
 import HomeDetailGrid from '../Components/HomeDetailGrid';
+import Footer from "../Components/Footer";
+
 const HomeDetails = () => {
 
 	return (
 		<>
 		<Header />
 		<HomeDetailGrid />
+		<Footer/>
 		</>
 	);
 };

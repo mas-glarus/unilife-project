@@ -1,0 +1,148 @@
+footer {
+    margin: 0 0 0 0;
+}
+
+.socials-bg {
+    background-color: #42afff;
+    color: white;
+}
+
+.socials {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0;
+}
+
+.socials div {
+    width: 40%;
+}
+
+.socials-left p {
+    line-height: 150%;
+}
+
+.socials-left input {
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem;
+}
+
+.socials-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socials-right img {
+    width: 1.3rem;
+    filter: invert(1);
+}
+
+.socials-right span {
+    margin-left: .5rem;
+}
+
+.facebook,
+.twitter,
+.instagram {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.socials h6 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.socials p {
+    font-size: 1rem;
+}
+
+.about-bg {
+    background-color: black;
+}
+
+.about {
+    width: 90%;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+
+.about-left:nth-child(-n+2) p{
+    margin-right: 2rem;
+}
+
+.about-right {
+    width: 10%;
+    justify-content: space-between;
+}
+
+.about-left,
+.about-right {
+    display: flex;
+}
+
+.copyright {
+    color: grey;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.copyright img {
+    filter: invert(0.5);
+    width: 1rem;
+    margin-right: .25rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 3rem 0;
+    }
+
+    .socials div {
+        width: 80%;
+    }
+
+    .socials-left{
+        margin-bottom: 2rem;
+    }
+
+    .facebook,
+    .twitter,
+    .instagram {
+        margin-top: 1rem;
+    }
+
+    .about-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-left p{
+        margin: .5rem 0;
+    }
+}

@@ -2,54 +2,72 @@ import Select from "react-select";
 import React, { useState } from "react";
 import getCities from "../api/getCities";
 import AsyncSelect from "react-select/async";
-
-import "../assets/searchbox.css";
+import "../styles/SearchBox.css?v=4";
 
 const SearchBox = () => {
-	const [inputValue, setValue] = useState("");
-	const [selectedValue, setSelectedValue] = useState(null);
+  const [cityValue, setCityValue] = useState(null);
+  const [bedroomValue, setBedroomValue] = useState(null);
 
-	//handle input change event
-	const handleInputChange = (value) => {
-		setValue(value);
-	};
+  const handleCityChange = (selectedOption) => {
+    setCityValue(selectedOption);
+  };
 
-	//handle selection
-	const handleChange = (value) => {
-		setSelectedValue(value);
-	};
+  const handleBedroomChange = (selectedOption) => {
+    setBedroomValue(selectedOption);
+  };
 
-	const fetchData = () => {
-		return getCities.get("/cities").then((result) => {
-			const res = result.data.response;
-			return res;
-		});
-	};
+  const handleSearch = () => {
+    // Do something with the selected city and bedroom values
+    console.log("Selected city:", cityValue);
+    console.log("Selected bedroom:", bedroomValue);
+  };
 
-	return (
-		<div>
-			<h1>Searchbox</h1>
-			<div className="test-log">
-				Selected Value: {JSON.stringify(selectedValue || {}, null, 2)}
-			</div>
-			<div className="search-container">
-				<div className="select-container">
-					<AsyncSelect
-						cacheOptions
-						defaultOptions
-						value={selectedValue}
-						getOptionLabel={(e) => e.name}
-						getOptionValue={(e) => e._id}
-						loadOptions={fetchData}
-						onInputChange={handleInputChange}
-						onChange={handleChange}
-						className="select"
-					/>
-				</div>
-			</div>
+  const fetchData = () => {
+    return getCities.get("/cities").then((result) => {
+      const res = result.data.response;
+      return res;
+    });
+  };
 
-		</div>
-	);
+  return (
+    <div className="searchBox-container">
+      <div className="search-container">
+        <div className="select-container">
+          <Select
+            value={cityValue}
+            onChange={handleCityChange}
+            options={[
+              { value: "New York", label: "New York" },
+              { value: "Los Angeles", label: "Los Angeles" },
+              { value: "Chicago", label: "Chicago" },
+              { value: "Houston", label: "Houston" },
+              { value: "Phoenix", label: "Phoenix" },
+            ]}
+            placeholder="Search by city..."
+            className="select"
+          />
+        </div>
+        <div className="select-container">
+          <Select
+            value={bedroomValue}
+            onChange={handleBedroomChange}
+            options={[
+              { value: "1", label: "1 Bedroom" },
+              { value: "2", label: "2 Bedrooms" },
+              { value: "3", label: "3 Bedrooms" },
+              { value: "4", label: "4+ Bedrooms" },
+            ]}
+            placeholder="Any bedroom..."
+            className="select"
+          />
+        </div>
+        <button onClick={handleSearch} className="find-homes-button">
+          Find Homes
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default SearchBox;
+

@@ -1,11 +1,10 @@
 import React from 'react';
-import "../styles/HeroAllCities.css?v=1";
+import "../styles/HeroAllCities.css?v=20";
 
 
 const HeroAllCities = () => {
   return (
     <div className='hero-section'>
-      <img src="../src/assets/hero-img.jpg" alt="hero" />
       <div className='title'>
         <h1>Student Accommodation</h1>
         <p>UniLife have student accommodation available across the UK.</p> 

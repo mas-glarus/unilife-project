@@ -1,12 +1,15 @@
 import { useContext } from "react"
 import { CityContext } from "../Context/CityContext"
 import CityName from "./CityName";
+import '../styles/AllCitiesGrid.css';
 
 // GRID OF ALL CITIES
 const GridAllCities = () => {
 
-const {cityinfo} = useContext(CityContext);
+    // // Extract first 24 cities
+    // const limitedCityInfo = cityinfo.slice(0, 24);
 
+    const { cityinfo } = useContext(CityContext);
 
     return (
         <div className="allcities">

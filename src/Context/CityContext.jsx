@@ -1,12 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-
 export const CityContext = createContext();
 
 const CityContextProvider = ({ children }) => {
 
     const [cityinfo, setcityinfo] = useState([]);
+  
    
     useEffect(() => {
 
@@ -26,6 +26,3 @@ const CityContextProvider = ({ children }) => {
 }
 
 export default CityContextProvider;
-
-
-

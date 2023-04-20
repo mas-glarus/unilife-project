@@ -18,9 +18,14 @@ a {
   margin: 0 20px;
 }
 
+.allcitiesbtndiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .allcitiesbtn {
-  position: relative;
-  left: 46%;
+  
   text-align: center;
   border: solid 1px;
   border-radius: 8px;
@@ -195,18 +200,21 @@ a {
     display: flex;
     justify-content: space-evenly;
     margin: 50px 30px;
+    /* border: solid 1px; */
   }
 
-  .big-img img {
-    border-radius: 16px;    
-  }
-
-  .small-img {
-    height: 6rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0 0 0;
+  .img {
     border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .img > * {
+    height: 100%;
+    width: 90%;
+    border-radius: 16px;
+
   }
 
   .homeinfoflex {
@@ -416,6 +424,7 @@ a {
     display: flex;
     justify-content: space-between;
   }
+
   .furnished > address {
     font-size: small;
     font-weight: lighter;
@@ -433,16 +442,18 @@ a {
     margin: 40px 20px;
   }
 
-  .big-img img {
-    border-radius: 16px;    
+  .img {
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  .small-img {
-    height: 6rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0 0 0;
+  .img > * {
+    height: 100%;
+    width: 90%;
     border-radius: 16px;
+
   }
 
   .homeinfoflex {
@@ -488,7 +499,8 @@ a {
   }
 
   .btns > button {
-    padding: 0.7rem 3rem;
+    padding: 10px;
+    margin: 10px;
     border: solid 1px gray;
     border-radius: 8px;
     font-weight: bold;
@@ -615,6 +627,7 @@ a {
   border-radius: 16px;
   width: 20em;
   height: 23em;
+  margin: 10px 0;
   }
 
   .cityhomesdetails > img {
@@ -676,22 +689,20 @@ a {
     margin: 40px 20px;
   }
   
-  .big-img > img { 
-    width: 30rem;
-
-  }
-  .big-img img {
-    border-radius: 16px;    
-    
-  }
-
-  .small-img {
-    height: 6rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0 0 0;
+  .img {
     border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
+
+  .img > * {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+
+  }
+
 
   .homeinfoflex {
     display: flex;

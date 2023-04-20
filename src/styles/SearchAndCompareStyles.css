@@ -1,0 +1,73 @@
+.search-and-compare {
+    margin: 0;
+}
+
+.search-and-compare-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.information {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.information h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.information p {
+    color: #383838;
+    line-height: 160%;
+    margin: 1rem 0;
+}
+
+.selection {
+    margin-bottom: 2rem;
+}
+
+.selection,
+.favorite {
+    display: flex;
+}
+
+.selection img,
+.favorite img {
+    margin: .25rem 1rem 0 0;
+    width: 2rem;
+}
+
+.information button {
+    width: 12rem;
+    margin-left: 3rem;
+    padding: .75rem 0;
+    border-radius: .5rem;
+    border: none;
+    color: white;
+    background-color: #3A5295;
+}
+
+@media screen and (max-width: 768px) {
+    .selection,
+    .favorite,
+    .banner {
+        display: none;
+}
+
+.search-and-compare-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+
+.information button {
+    margin:0;
+}
+
+}

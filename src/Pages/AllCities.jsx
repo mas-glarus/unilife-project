@@ -2,9 +2,8 @@
 import React from 'react';
 import Header from '../Components/Header';
 import HeroAllCities from '../Components/HeroAllCities';
-import { useContext } from "react";
-import { CityContext } from "../Context/CityContext";
 import GridAllCities from '../Components/GridAllCities';
+import Footer from "../Components/Footer";
 
 const AllCities = () => {
 
@@ -15,7 +14,8 @@ const AllCities = () => {
 		<Header/>
 		<HeroAllCities/>
 		<GridAllCities />
-
+		<Footer />
+		
 		</>
 	);
 };

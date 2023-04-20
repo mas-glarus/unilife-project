@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../styles/HomeCityGrid.css';
 
 
 const HomepageGridItem = ({city}) => {
@@ -9,7 +10,7 @@ const HomepageGridItem = ({city}) => {
         backgroundRepeat: `no-repeat`,
         backgroundPosition: `center`,
         backgroundSize: `cover`,
-
+        textDecoration: 'none'
     } 
 
     return (

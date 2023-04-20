@@ -36,14 +36,11 @@ const HomeDetailGrid = () => {
         ) : (<>
             <Link to={"/cityDetails/" + homedetails.city_id._id }><button>Back to search</button></Link>
             <div className="homedetailflex">
-                <div className="big-img">
+                <div className="img">
                     <img src={homedetails.images[0]}/>
-                    <div className="small-img">
-                        <img src={homedetails.images[1]}/>
-                        <img src={homedetails.images[2]}/>
-                        <img src={homedetails.images[3]}/>
-                         
-                    </div>
+                    <img src={homedetails.images[1]}/>
+                    <img src={homedetails.images[2]}/>
+                    <img src={homedetails.images[3]}/>
                 </div>    
                 <div className="homedetailbtns" >
                     <div className="homeinfoflex">
