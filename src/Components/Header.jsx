@@ -27,7 +27,7 @@ const Header = () => {
         <button className="shortlist">
           <AiOutlineHeart /> <span>Shortlist</span>
         </button>
-        <Link to="/contact" className="contact-us">
+        <Link to="/contactUs" className="contact-us">
           <FaRegEnvelope/> <span>Contact Us</span>
         </Link>
       </div>
@@ -48,7 +48,7 @@ const Header = () => {
             <button className="shortlist">
               <AiOutlineHeart /> <span>Shortlist</span>
             </button>
-            <Link to="/contact" className="contact-us">
+            <Link to="contactUs" className="contact-us">
               <FaRegEnvelope /> <span>Contact Us</span>
             </Link>
           </div>

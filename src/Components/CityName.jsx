@@ -1,16 +1,10 @@
-import { useContext } from "react"
-import { CityContext } from "../Context/CityContext";
-import '../styles/AllCitiesGrid.css';
-
-
+import { Link } from 'react-router-dom'
 const CityName = ({city}) => {
-    const { setSelectedCity } = useContext(CityContext);
-    const handleClick = () => {
-        setSelectedCity(city);
-    }
     
     return (
-        <div className="grid-city-item" onClick={handleClick}>{city.name}</div>
+        <Link to={"../cityDetails/"+ city._id}>
+        <div className="grid-item-name">{city.name}</div>
+        </Link>
     )
 }
 

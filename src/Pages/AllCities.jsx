@@ -1,17 +1,21 @@
-import React from "react";
-import Header from "../Components/Header";
-import HeroAllCities from "../Components/HeroAllCities";
-import GridCityName from "../Components/GridCityName";
+
+import React from 'react';
+import Header from '../Components/Header';
+import HeroAllCities from '../Components/HeroAllCities';
+import GridAllCities from '../Components/GridAllCities';
 import Footer from "../Components/Footer";
-import { useContext } from "react";
-import { CityContext } from "../Context/CityContext";
+
 const AllCities = () => {
+
 	return (
+
 		<>
-			<Header />
-			<HeroAllCities />
-			<GridCityName />
-			<Footer />
+
+		<Header/>
+		<HeroAllCities/>
+		<GridAllCities />
+		<Footer />
+		
 		</>
 	);
 };
